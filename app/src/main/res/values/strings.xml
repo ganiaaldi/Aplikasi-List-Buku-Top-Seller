@@ -9,4 +9,7 @@
         Lima buku sebelumnya yang juga masih dari Seri Bumi, berjudul Bumi, Bulan, Matahari, Bintang, Ceros dan Batozar dan juga Komet.
     </string>
     <string name="move_activity">Cek Buku Top Seller Mei 2019</string>
+    <string name="judul_buku">Judul Buku</string>
+    <string name="penulis">Penulis</string>
+    <string name="deskripsi">Deskripsi</string>
 </resources>

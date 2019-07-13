@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -20,6 +21,10 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
         this.listBook = list;
     }
 
+    private OnItemClickCallback onItemClickCallback;
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     @NonNull
     @Override
@@ -33,10 +38,38 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
         Book book = listBook.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(book.getPhoto())
-                .apply(new RequestOptions().override(55, 55))
+                .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
         holder.tvName.setText(book.getName());
         holder.tvFrom.setText(book.getFrom());
+        holder.tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(holder.itemView.getContext(), //"Favorite " +
+                        listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.tvFrom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(holder.itemView.getContext(), //"Share " +
+                        listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(listBook.get(holder.getAdapterPosition()));
+            }
+        });
+
     }
 
     @Override
@@ -53,5 +86,9 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById(R.id.tv_item_from);
         }
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(Book data);
     }
 }

@@ -4,6 +4,7 @@ public class Book {
     private String name;
     private String from;
     private int photo;
+    private String description;
 
     public String getName() {
         return name;
@@ -30,4 +31,10 @@ public class Book {
     }
 
 
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
+
