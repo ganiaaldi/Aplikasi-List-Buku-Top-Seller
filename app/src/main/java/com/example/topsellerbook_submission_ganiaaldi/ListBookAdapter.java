@@ -30,13 +30,13 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
 
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
-        Book hero = listBook.get(position);
+        Book book = listBook.get(position);
         Glide.with(holder.itemView.getContext())
-                .load(hero.getPhoto())
+                .load(book.getPhoto())
                 .apply(new RequestOptions().override(55, 55))
                 .into(holder.imgPhoto);
-        holder.tvName.setText(hero.getName());
-        holder.tvFrom.setText(hero.getFrom());
+        holder.tvName.setText(book.getName());
+        holder.tvFrom.setText(book.getFrom());
     }
 
     @Override

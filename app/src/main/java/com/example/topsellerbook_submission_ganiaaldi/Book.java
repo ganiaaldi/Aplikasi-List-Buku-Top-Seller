@@ -3,7 +3,7 @@ package com.example.topsellerbook_submission_ganiaaldi;
 public class Book {
     private String name;
     private String from;
-    private String photo;
+    private int photo;
 
     public String getName() {
         return name;
@@ -21,11 +21,11 @@ public class Book {
         this.from = from;
     }
 
-    public String getPhoto() {
+    public int getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(int photo) {
         this.photo = photo;
     }
 
