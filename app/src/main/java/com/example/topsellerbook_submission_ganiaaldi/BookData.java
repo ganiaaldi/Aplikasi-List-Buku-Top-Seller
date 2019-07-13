@@ -4,8 +4,17 @@ import java.util.ArrayList;
 
 public class BookData {
     public static String[][] data = new String[][]{
-            {"Tere Liye", "Tere Liye kembali merilis buku terbarunya pada Maret 2019 lalu. Kali ini berjudul Komet Minor, yang merupakan buku bungsu dari Seri Bumi. Seri yang menceritakan tiga sahabat remaja, Ali, Raib dan Seli yang bertualang ke negeri paralel dan harus menghadapi tokoh antagonis, Si Tanpa Mahkota.", "drawable-v24/komet-minor.jpg"},
 
+            {"Bumi Manusia", "Pramoedya Ananta Toer","drawable/bumimanusia.jpg" },
+            {"Cara Berbahagia Tanpa Kepala", "Triskaidekaman", "drawable/caraberbahagiatanpakepala.jpg"},
+            {"Five Feet Apart", "Rachael Lippincott, Mikki Daughtry, Tobias Iaconis", "drawable/fivefeetapart.jpg"},
+            {"Komet Minor", "Tere Liye", "drawable/kometminor.jpg"},
+            {"Norwegian Wood", "Haruki Murakami", "drawable/norwegianwood.jpg"},
+            {"Orang-Orang Biasa", "Tere Liye", "drawable/orangorangbiasa.jpg"},
+            {"Rich People Problems", "Kevin Kwan", "drawable/richpeopleproblems.jpg"},
+            {"Senja Dan Pagi", "Alffy Rev", "drawable/senjadanpagi.jpg"},
+            {"The Girl Who Drank Moon", "Kelly Barnhill", "drawable/thegirlwhodrankmoon.jpg"},
+            {"This Is Why I Need you", "Brian Khrisna", "drawable/thisiswhyineedyou.jpg"},
     };
     public static ArrayList<Book> getListData(){
         ArrayList<Book> list = new ArrayList<>();
