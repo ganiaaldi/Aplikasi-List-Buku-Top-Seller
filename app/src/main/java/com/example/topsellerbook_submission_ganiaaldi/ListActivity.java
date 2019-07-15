@@ -42,11 +42,12 @@ public class ListActivity extends AppCompatActivity {
     private void showSelectedBook (Book book) {
 
         Intent moveDetailActivity = new Intent(ListActivity.this,DetailActivity.class);
-        moveDetailActivity.putExtra(DetailActivity.EXTRA_NAME, book.getName());
-        moveDetailActivity.putExtra(DetailActivity.EXTRA_FROM, book.getFrom());
-        moveDetailActivity.putExtra(DetailActivity.EXTRA_PHOTO, book.getPhoto());
-        moveDetailActivity.putExtra(DetailActivity.EXTRA_DESCRIPTION, book.getDescription());
+        moveDetailActivity.putExtra("penulis", book.getName());
+        moveDetailActivity.putExtra("judulbuku", book.getFrom());
+        moveDetailActivity.putExtra("photo", book.getPhoto());
+        moveDetailActivity.putExtra("deskripsi", book.getDescription());
         startActivity(moveDetailActivity);
 
     }
+
 }

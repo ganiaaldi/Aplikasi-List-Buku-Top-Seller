@@ -1,15 +1,8 @@
 <resources>
     <string name="app_name">List Buku Top Seller</string>
-    <string name="kometminor">
-        Tere Liye kembali merilis buku terbarunya pada Maret 2019 lalu.
-        Kali ini berjudul Komet Minor, yang merupakan buku bungsu dari Seri Bumi.
-        Seri yang menceritakan tiga sahabat remaja, Ali, Raib dan Seli yang bertualang ke negeri paralel
-        dan harus menghadapi tokoh antagonis, Si Tanpa Mahkota.
-        Buku Komet Minor adalah buku keenam, dan penutup kisah Ali, Raib dan Seli melawan Si Tanpa Mahkota.
-        Lima buku sebelumnya yang juga masih dari Seri Bumi, berjudul Bumi, Bulan, Matahari, Bintang, Ceros dan Batozar dan juga Komet.
-    </string>
     <string name="move_activity">Cek Buku Top Seller Mei 2019</string>
     <string name="judul_buku">Judul Buku</string>
     <string name="penulis">Penulis</string>
     <string name="deskripsi">Deskripsi</string>
+
 </resources>

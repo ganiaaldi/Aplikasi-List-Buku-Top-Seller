@@ -1,28 +1,41 @@
 package com.example.topsellerbook_submission_ganiaaldi;
 
+import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
 
-    public static final String EXTRA_NAME = "extra_name";
-    public static final String EXTRA_FROM = "extra_from";
-    public static final String EXTRA_PHOTO = "extra_photo";
-    public static final String EXTRA_DESCRIPTION = "extra_description";
 
-
+    ImageView img;
+    TextView namapenulis, njudulbuku, ndeskripsi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        TextView tvDataReceived = findViewById(R.id.tv_data_received);
-        String name = getIntent().getStringExtra(EXTRA_NAME);
-        int from = getIntent().getIntExtra(EXTRA_FROM, 0);
-        int description = getIntent().getIntExtra(EXTRA_DESCRIPTION, 0);
-        String text = "Judul Buku : " + name +
-                ",\nPenulis : " +  from +
-        ",\nDeskripsi : " +  description;
-        tvDataReceived.setText(text);
+
+        Intent moveDetailActivity = getIntent();
+        String penulis= moveDetailActivity.getExtras().getString("penulis");
+        String judulbuku = moveDetailActivity.getExtras().getString("judulbuku");
+        String deskripsi = moveDetailActivity.getExtras().getString("deskripsi");
+        int photo= moveDetailActivity.getExtras().getInt("photo");
+
+
+        img = findViewById(R.id.detail_buku);
+        namapenulis = findViewById(R.id.tv_item_name);
+        njudulbuku = findViewById(R.id.tv_item_from);
+        ndeskripsi = findViewById(R.id.tv_item_description);
+
+        img.setImageResource(photo);
+        namapenulis.setText(penulis);
+        njudulbuku.setText(judulbuku);
+        ndeskripsi.setText(deskripsi);
     }
 }

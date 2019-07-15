@@ -42,26 +42,7 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
                 .into(holder.imgPhoto);
         holder.tvName.setText(book.getName());
         holder.tvFrom.setText(book.getFrom());
-        holder.tvName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), //"Favorite " +
-                        listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.tvFrom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), //"Share " +
-                        listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listBook.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
